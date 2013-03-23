@@ -7,6 +7,17 @@
 class Oracle extends Connector {
 
 	/**
+         * The PDO connection options.
+         *
+         * @var array
+         */
+         protected $options = array(
+             PDO::ATTR_CASE => PDO::CASE_UPPER,
+             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+             PDO::ATTR_ORACLE_NULLS => PDO::NULL_NATURAL,
+         );
+         
+	/**
 	 * Establish a PDO database connection.
 	 *
 	 * @param array $config
