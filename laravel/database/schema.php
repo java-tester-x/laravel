@@ -186,6 +186,9 @@ class Schema {
 
 			case 'sqlite':
 				return new Schema\Grammars\SQLite($connection);
+
+			case 'oracle':
+                return new Schema\Grammars\Oracle($connection);
 		}
 
 		throw new \Exception("Schema operations not supported for [$driver].");

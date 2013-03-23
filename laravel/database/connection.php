@@ -92,6 +92,9 @@ class Connection {
 			case 'pgsql':
 				return $this->grammar = new Query\Grammars\Postgres($this);
 
+			case 'oracle':
+                return $this->grammar = new Query\Grammars\Oracle($this);
+
 			default:
 				return $this->grammar = new Query\Grammars\Grammar($this);
 		}
